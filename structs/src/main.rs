@@ -16,6 +16,15 @@ fn main() {
         String::from("maxmax")
         );
     println!("user2 is {:?}", user2);
+
+    // creating instance from other instance
+    // example from user1
+    let user3 = User {
+        username: String::from("jackson"),
+        email: String::from("jackson@gmail.com"),
+        ..user1
+    };
+    println!("user3 is {:?}", user3);
 }
 
 fn create_user(email: String, username: String) -> User {
